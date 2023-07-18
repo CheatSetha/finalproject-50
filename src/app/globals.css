@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+/* for dark theme */
+[data-theme="light"]
+    {
+    background-color: white;
+}
+
+[data-theme="dark"] {
+   background-color: black;
+}
+
+
+
+
+body {
+    color: #1e1e1e;
+    background-color: whitesmoke;
+}
+
+
+.btn-util {
+    background-color: #E85854 !important;
+    padding: 10px !important;
+    border-radius: 16px !important;
+}
+
+/* ===========home page ============*/
+.watermark {
+    background: linear-gradient(135deg, #FFF5C3 0%, #9452A5 100%);
+    border-radius: 26px;
+}
+
+.certificate {
+    background: linear-gradient(135deg, #FAD7A1 0%, #E96D71 100%);
+    border-radius: 26px;
+}
+
+/*#bg-img {*/
+/*    background-image: url('/assets/image/footer.png');*/
+
+/*    background-size: 100% 100%;*/
+/*    background-repeat: no-repeat;*/
+
+/*}*/
+
+/* ===========defualt style ============*/
+.mainround {
+    border-radius: 16px !important;
+}
+
+/* ===== toggle with animation =======*/
+/* Default */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked + .slider {
+    background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+/*end of toggle theme switch*/
+
+
+/* ============ | Dashboard |=============== */
+.db-bg{
+    background-color: #f5f8fe;
+}
+.bg-dark{
+    background-color: #0b1437;
+}
+.box-dark{
+    background-color: #111c44;
+}
+.text-color{
+    color: #1b254b;
+}
+
+/* ============ | end of Dashboard |=============== */
+/* animation fade in fade out fade up fade down */
+
+
+/* fix navbar */
+/* .nav-item:hover {
+    background-color: white !important;
+
+} */
+.nav-item:focus {
+    background-color: transparent !important;
+}
+
+/* reset password email input */
+.date-range-picker {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+
+  /*  nav */
+  .nav-item:focus{
+    background-color: transparent !important;
+
+  }
