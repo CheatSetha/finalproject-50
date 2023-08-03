@@ -1,5 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { logout, setCredentials, setCurrentUser } from "../features/auth/authSlice";
+import {
+  logout,
+  setCredentials,
+  setCurrentUser,
+} from "../features/auth/authSlice";
 import { getDecryptedRefreshToken } from "@/lib/cryptography";
 
 // create base query with authentication
@@ -8,7 +12,7 @@ const baseQuery = fetchBaseQuery({
   baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.accessToken;
-    // console.log("token smos: " + token);
+
     headers.set("content-type", "application/json");
     if (token) {
       headers.set("Authorization", `Bearer ${token}`);
@@ -56,10 +60,10 @@ const baseQueryWithReAuth = async (args, api, extraOptions) => {
           result = await baseQuery(args, api, extraOptions);
         } else if (resultResponse.code === 401) {
           api.dispatch(logout());
-          
+
           alert("Your session has expired. Please login again.");
           window.open("/login", "_self");
-          
+
           // alert("Your session has expired. Please login again(x).");
           // api.dispatch(setCredentials(resultResponse.data));
         }
@@ -71,7 +75,7 @@ const baseQueryWithReAuth = async (args, api, extraOptions) => {
       api.dispatch(logout());
     }
   }
-  
+
   return result;
 };
 // create api slice with custom base query
